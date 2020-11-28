@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import List from './List.js';
-import Search from './Search.js';
+import List from './list.js';
+import Search from './search.js';
 
 const App = () => {
   const initialToDoList = [
