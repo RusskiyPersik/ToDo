@@ -1,4 +1,4 @@
-const Item = ({item, onRemoveItem}) => (
+const Item = ({item, onRemoveItem, onEditItem}) => (
     <div>
         <p>{item.title}</p>
         <p>{item.task_type}</p>
@@ -6,6 +6,11 @@ const Item = ({item, onRemoveItem}) => (
         <span>
             <button type="button" onClick={() => onRemoveItem(item)}>
                 Remove Task
+            </button>
+        </span>
+        <span>
+            <button type="button" onClick={() => onEditItem(item)}>
+                Edit Task
             </button>
         </span>
         <hr />
