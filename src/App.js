@@ -29,7 +29,6 @@ const App = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [toDoList, setToDoList] = React.useState(initialToDoList);
   const [editing, setEditing] = React.useState(false);
-
   const [pObjectID, setPObjectID] = React.useState(0);
   const [nextID, setNextID] = React.useState(3);
   const [title, setTitle] = React.useState('');
@@ -41,7 +40,6 @@ const App = () => {
       toDo => item.objectID !== toDo.objectID
     );
     setToDoList(newTodoList);
-    console.log(toDoList);
   }
 
   const handleEditItem = item => {
@@ -84,7 +82,7 @@ const App = () => {
     setTitle("");
     setTaskType("");
     setDetails("");
-    
+
     Array.from(document.querySelectorAll("input")).forEach(
       input => (input.value = "")
     );
@@ -117,13 +115,6 @@ const App = () => {
   const searchedTasks = toDoList.filter(item =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const toDoListReducer = (state, action) => {
-    switch(action.type){
-      case 'EDIT_STORIES':
-        return 
-    }
-  }
 
   return (
     <div>
